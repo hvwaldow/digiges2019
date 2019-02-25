@@ -1,0 +1,45 @@
+div.hgreen {
+  color: #00E400;
+}
+
+.orange {
+  color: #FF9955;
+}
+
+.reveal section img.raw {
+  border: none;
+  /* /\* position:absolute; *\/ */
+  /* margin-top: -100px; */
+  /* margin-left: -700px; */
+}
+
+.reveal section div.rightcolumn {
+  width: 640px;
+  height: 500px;
+  float: right;
+}
+
+.reveal section div.leftcolumn {
+  width: 630px;
+  height: 500px;
+  margin-left: 0px;
+}
+
+.reveal section div.sectit h3 {
+  /* position:absolute; */
+  color: #FF9955;
+  width: 400px;
+  margin-left: 920px;
+}
+
+.reveal section ul.twocolslist {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  list-style-position: inside;
+}
+.reveal section ul.twocolslist li {
+  float: left;
+  width: 100%;
+}
+

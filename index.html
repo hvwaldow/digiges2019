@@ -1,0 +1,563 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Computerdetektive</title>
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/theme/custom.css">
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+  
+    </script>
+  </head>
+  püen pdf icon wikimedia
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	
+	<!-- <section id="1" data-background-image="../images/lan.jpg"> -->
+	  <section id="1" data-background-image="./images/alt_title.png">
+	  <div class="hgreen" style="background:#392C40;opacity:0.8;margin-top:100px;border-radius:100px;padding:20px;">
+	    <h2>Guerillapädagogik in der Informationstechnik:</h2>
+	    <h3>Wie Primarschülerinnen dein Passwort cracken</h3>
+	    <div style="text-align:left;">
+	      <p>Winterkongress der Digitalen Gesellschaft 2019-02-23</p>
+	      <p>
+		<code style="font-size:80%;">Harald von Waldow &lt;blackbelly@computerdetektive.ch&gt;</code><br />
+		<code style="font-size:80%;">Ranjan Benz</code>
+		<!-- <code style="font-size:60%;">&lt;blackbelly@computerdetektive.ch&gt;</code> -->
+	      </p>
+	    </div>
+	  </div>
+	  <div style="position:absolute;bottom:-120px;left:-20px;">
+	    <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="./images/cc0.svg" class="raw" alt="CC0" width="160"/></a>
+	    <a href="./guerilla_digiges_2019-02-23.pdf"><img src="./images/pdficon.png" class="raw" alt="pdf" width="80"/></a>
+
+	  </div>
+	</section>
+	<section id="2">
+	  <div class="rightcolumn">
+	    <h3> Worum geht es?</h3>
+	    <span class="orange"><b>C O M P U T E R D E T E K T I V E</b></span>
+	    <p></p>
+	    <ul>
+	    <li>Ein IT Kurs für Primaschülerinnen</li>
+	    <li>Klassenstufen 4 - 6 (9 - 12 Jahre)</li>
+	    <li>12 Termine à 1h 45m im GZ Zürich-Seebach</li>
+	    <li>September - Dezember 2018</li>
+	  </ul>
+	  </div>
+	  <div class="leftcolumn">
+	    <!-- <img class="raw" src="../images/lan.jpg" width="100%"/> -->
+	    <img class="raw" src="./images/alt_title.png" width="100%"/>
+	  </div>
+	</section>
+	<section id="3">
+	  <div class="sectit" style="margin-top: -90px;">
+	    <h3>Motivation</h3>
+	  </div>
+	  <div style="position:relative;width:640px;height:500px;margin:0 auto">
+	    <div style="position:absolute" data-fragment-index="1" class="raw fragment fade-out"><img width="600px" src="./images/digital_wordle.png" /></div>
+	    <div style="position:absolute" data-fragment-index="1" class="raw fragment fade-in"><img width="600px" src="./images/acer_switch_5.png" /></div>
+	  </div>
+	    <ul>
+	      <li>"Digitale Bildung" ist in aller Munde</li>
+	      <li><mark>Lehrplan 21</mark>: "Medien und Informatik"</li>
+	      <li>Ab diesem Schuljahr, ab Klasse 5</li>
+	    </ul>
+	</section>
+	<section id="4">
+	  <div class="sectit" style="margin-top: -40px;">
+	    <h3>Motivation</h3>
+	  </div>
+	  <div>
+	    <div style="width:630px;display:inline-block">
+	      <img class="raw" width=630 src="./images/dagstuhl.png" /><br />
+	      <span style="font-size:50%;">Quelle: <a href="https://www.lmvz.ch/schule/connected">Lehrmittelverlag Zürich</a></span>
+	    </div>
+	    <div style="width:630px;display:inline-block" class="fragment" data-fragment-index="2" >
+	      <img class="raw" width=350 src="./images/connected01_cover.jpeg" /><br />
+	      <span style="font-size:50%">Quelle: <a href="https://www.lmvz.ch/schule/connected">Lehrmittelverlag Zürich</a></span>
+	     </div>
+	  </div>
+	  <ul style="columns: 2;-webkit-columns: 2;-moz-columns: 2;list-style-position: inside;">
+	    <li>Beispiel <i>Bilder</i></li>
+	    <li class="fragment" data-fragment-index="1">Wichtige Grundlage?</li>
+	    <li class="fragment" data-fragment-index="1">Kunst & Zeichenunterricht?</li>
+	    <li class="fragment" data-fragment-index="2">Macht 20% des Lehrbuchs aus!</li>
+	  </ul>
+	</section>
+	<section id="5">
+	  <div class="sectit" style="margin-top:-330px;">
+	    <h3>Motivation</h3>
+	  </div>
+	  <h4>Elternperspektive</h4>
+	  <ul>
+	    <li>Tragfähige technische Grundlagen</li>
+	    <li class="fragment" data-fragment-index="1">Souveräner Umgang mit dem Computer</li>
+	    <ul class="fragment" data-fragment-index="1">
+	      <li>"Ich passe die Maschine meinen Bedürfnissen an, nicht umgekehrt."</li>
+	    </ul>
+	    <span class="fragment" data-fragment-index="1">=> <mark>&nbsp;Grundlage für Kreativität&nbsp;</mark>
+	    <li class="fragment" data-fragment-index="2">Sicherheit, Datenschutz, Privatsphäre</li>
+	    <li class="fragment" data-fragment-index="2">Schutz vor Angriffen, "bösen Männern", Betrug, Datenklau</li>
+	  </ul>
+	</section>
+	<section id="6" >
+	  <div class="sectit" style="margin-top:-180px;">
+	    <h3>Motivation</h3>
+	  </div>
+	  <h4>Gesellschaftliche Perspektive</h4>
+	  <ul>
+	    <li>Digitalisierung durchdringt alle gesellschaftlichen Bereiche.</li>
+	    <li class="fragment" data-fragment-index="1">Wir sind überfordert.</li>
+	    <li class="fragment" data-fragment-index="2">Beispiele aus der Tagespolitik:</li>
+	    <ul class="fragment" data-fragment-index="2">
+	      <li>Überwachungs- und Manipulationsskandale<br /> (FB, Google, Microsoft, ...)</li>
+	      <li>"Netzsperren" (Geldspielgesetz)</li>
+	      <li>E-Voting Debatte</li>
+	    </ul>
+	    <li class="fragment" data-fragment-index="3">Debatten und Reaktionen sind durch technische Ignoranz geprägt.</li>
+	    <span class="fragment" data-fragment-index="3">=><mark>&nbsp;Es besteht massiver Bildungsbedarf&nbsp;</mark>
+	  </ul>
+	</section>
+	<section id="7">
+	  <!-- <div class="sectit" style="margin-top:-330px;"> -->
+	  <!--   <h3>Motivation</h3> -->
+	  <!-- </div> -->
+	    <div style="position:absolute;width:1200px;">
+	      <blockquote class="fragment fade-out" data-fragment-index="1" style="border-radius:20px;color: #00E400;font-size:110%">
+		<i>"Machs doch besser, wenn dich so viel stört!"</i>
+	      </blockquote>
+	    </div>
+	    <div style="position:absolute;width:1200px;">
+	      <blockquote class="fragment fade-in" data-fragment-index="1" style="border-radius:20px;color: #00E400;font-size:110%;">
+		<s><i>"Machs doch besser, wenn dich so viel stört!"</i></s>
+	      </blockquote>
+	      <blockquote class="fragment fade-in" data-fragment-index="1" style="border-radius:20px;color: yellow;font-size:110%;">
+		<i>"Versuche etwas anderes, das hoffentlich Sinn macht"</i>
+	      </blockquote>
+	    </div>
+	</section>
+	<section id="8">
+	  <div class="sectit" style="margin-top:-120px;">
+	    <h3>Motivation</h3>
+	  </div>
+	  <h4>Vorhaben</h4>
+	  <ul>
+	    <li><mark>Technische Grundlagen</mark> mit langer Halbwertszeit vermitteln.</li>
+	    <li class="fragment">Direkt anwendbares technisches Know-How vermitteln; <mark>Spass</mark> und Nutzen.</li>
+	    <li class="fragment">Ein paar essentielle digitale <mark>Überlebensregeln</mark> vermitteln.</li>
+	  </ul>
+	  <div class="fragment" style="border:5px solid #00E400;;margin-top:30px;padding:10px 5px 10px 5px;">
+	    <ul>
+	      <li><mark>Begeisterung und Selbstvertrauen wecken!&nbsp;</mark></li>
+	      <ul>
+		<li>Ich kann die Maschine beherrschen und verstehen; sie gehorcht mir.</li>
+		<li>Meiner Kreativität sind praktisch keine Grenzen gesetzt.</li>
+		<li>Ein Computer ist viel mehr, als ein Gerät mit vielen Knöpfen.</li>
+	      </ul>
+	    </ul>
+	  </div>
+	</section>
+	<section id="9" data-background-image="./images/rechnerparade.jpg">
+	  <div class="sectit" style="margin-top:-210px;">
+	    <h3 style="background:#001133">Setup</h3>
+	  </div>
+	  <div class="fragment" data-fragment-index="3" style="position:absolute;"><img class="raw" src="./images/stick.png" /></div>
+	  <div class="fragment" data-fragment-index="1" style="color:yellow;background:#001133;opacity:0.8;margin-top:250px;border-radius:100px;padding:20px;">
+	    <ul>
+	      <li data-fragment-index="1" class="fragment">Laptops: 10  (geliehen von <a href="https://labdoo.org">Labdoo.org</a>) + 3</li>
+	      <li data-fragment-index="2" class="fragment">5 Schul-Tablets</li>
+	      <li data-fragment-index="3" class="fragment">16 Memory-Sticks (booten angepasstes Ubuntu 18.04 / Gnome 3</li>
+	      <li class="fragment">Mäuse, Apdapter, lose Komponenten</li>
+	      <li class="fragment" >2 Desktop PCs</li>
+	    </ul>
+	</section>
+	<section id="10" data-background-image="./images/klasse_anon.png">
+	  <div class="sectit" style="margin-top:-320px;">
+	    <h3 style="background:#001133">Setup</h3>
+	  </div>
+	  <div class="fragment" data-fragment-index="1" style="color:yellow;background:#001133;opacity:0.8;margin-top:250px;border-radius:100px;padding:20px;">
+	    <ul>
+	      <li>12 Teilnehmer/innen:<br />
+		  5 Maidli, 7 Buebe, 9 x 5. Klasse, 1 x 3. Klasse 1 x 6.Klasse</li>
+	       <li>Computerraum im GZ-Seebach</li>
+	    </ul>
+	</section>
+	<section id="11" data-background-image="./images/rechner_kaputt.jpg">
+	  <div class="sectit" style="margin-top:-210px;">
+	    <h3 style="background:#001133">So it begins</h3>
+	  </div>
+	  <div class="fragment" data-fragment-index="1" style="color:yellow;background:#001133;opacity:0.8;margin-top:250px;border-radius:100px;padding:20px;">
+	    <ul>
+	      <li>Detektivstory => kaputter Computer</li>
+	      <li class="fragment" data-fragment-index="2">Gehäuse, Mainboard, CPU, Lüfter, RAM, Festplatte</li>
+	      <ul class="fragment" data-fragment-index="2">
+		<li class="fragment" data-fragment-index="2">Was ist das?</li>
+		<li class="fragment" data-fragment-index="2">Wozu dients das?</li>
+	      </ul>
+	      <li class="fragment" data-fragment-index="2">Anfassen, einbauen</li>
+	    </ul>
+	</section>
+	<section id="12" data-background-image="./images/zusammenbau_anon.png">
+	  <div class="sectit" style="margin-top:-150px;">
+	    <h3 style="background:#001133">Schnitzeljagt</h3>
+	  </div>
+	  <div class="fragment" data-fragment-index="1" style="color:yellow;background:#001133;opacity:0.8;margin-top:250px;border-radius:100px;padding:20px;">
+	    <ul>
+	      <li>Ein 2. Rechner muss gefunden werden!</li>
+	      <li class="fragment">Koordinaten?<br />
+		=> openstreetmap.org, maps.google.com, swisstopo</li>
+	      <li class="fragment" >Oh, kein WLAN - Passwort!<br />
+		Was tun Erwachsene oft mit Passwörter?</li>
+	      <li class="fragment" >SSID / Hotspot / Signalstärke</li>
+	    </ul>
+	</section>
+	<section id="13" data-background-image="./images/message_rechner1.jpg">
+	  <div class="sectit" style="margin-top:-150px;">
+	    <h3 style="background:#001133">Filesystem</h3>
+	  </div>
+	  <div class="fragment" data-fragment-index="1" style="color:yellow;background:#001133;opacity:0.8;margin-top:250px;border-radius:100px;padding:20px;">
+	    <ul>
+	      <li>Finde eine Datei mit einem bestimmtem Namen.</li>
+	      <li>Finde Datei mit bestimmtem Inhalt!</li>
+	      <li class="fragment" data-fragment-index="2">Und zwar in einem Verzeichnisbaum mit</li>
+	      <ul class="fragment" data-fragment-index="2">
+		<li>64 directories,</li>
+		<li>168 files,</li>
+		<li>mit insgesamt 144 MB interessantem Inhalt</li>
+	      </ul>
+	    </ul>
+	</section>
+	<section id="14" data-background-image="./images/message_rechner1.jpg">
+	  <div class="sectit" style="margin-top:-40px;">
+	    <h3 style="background:#001133">Filesystem</h3>
+	  </div>
+	  <div class="fragment" data-fragment-index="1" style="color:yellow;background:#303030;opacity:0.9;margin-top:-20px;border-radius:100px;padding:20px;">
+	    <ul style="list-style-position: inside;">
+	      <div class="fragment" data-fragment-index="1">
+	      <div><mark>&nbsp;GUI:&nbsp;</mark></div>
+	      <li>Kennenlernen von Filetypen und ihren Endungen</li>
+	      <li>Typische File-Grössen</li>
+	      <li>Welche Anwendungen starten, wenn man draufklickt?</li>
+	      <li>Struktur eines Verzeichnisbaums</li>
+	      <p></p>
+	      </div>
+	      <div class="fragment">
+	      <div><mark>&nbsp;CLI:&nbsp;</mark></div>
+	      <li>Filetransfer
+		<pre><code class="bash">rsync -rv darlene@192.168.1.9:secret_sauce .</code></pre></li>
+	      <li>Finde Datei mit bestimmtem Namen
+		<pre><code class="bash">find . -name "L1D1ueber.ods"</code></pre></li>
+	      <li>Finde Datei mit bestimmtem Inhalt!
+		<pre><code class="bash">grep -Hr "G.A.S.P." .</code></pre></li>
+	      </div>
+	    </ul>
+	</section>
+	<section id="15" data-background-image="./images/message_rechner1.jpg">
+	  <div class="sectit" style="margin-top:-150px;">
+	    <h3 style="background:#001133">Cliffhanger</h3>
+	  </div>
+	  <div style="margin-top:220px;">
+	    <pre><code>
+Code: ROT13
+
+-------------------------------------------------------------------------------
+Qh unfg nyfb nhpu qvr mjrvgr Anpuevpug trshaqra haq ragfpuyüffryg. Thg trznpug!
+
+Qra aäpufgra jvpugvtra Nhsgent reuäyfg qh nhs qvrfre Jrofrvgr:
+
+fpvraprqngn.pu/tnfc_abgsnyycebgbxbyy.ugzy
+-------------------------------------------------------------------------------
+
+
+----------> end of transmision -- G.A.S.P./4711-12 <----------------------------
+	    </code></pre>
+	  </div>
+	</section>
+	<section id="16" data-background-image="./images/pluginzoom.png">
+	  <div class="sectit" style="margin-top:-40px;">
+	    <h3 style="background:#001133">Browser Basics</h3>
+	  </div>
+	  <div style="color:yellow;background:#303030;opacity:0.75;margin-top:-0px;border-radius:100px;padding:20px;">
+	    <ul>
+	      <div>
+	      <li>Bookmarks (Lesezeichen)</li>
+	      <li>Tabs</li>
+	      <li>History (Chronik)</li>
+	      <span style="color:#00E400;">Welche Seiten habe ich denn beim Einrichten der Sticks besucht?</span>
+	      <li>History löschen</li>
+	      <li>Private mode</li>
+	      </div>
+	      <div class="fragment">
+	      <li>Plugins</li>
+	      <ul>
+		<li>uBlock origin</li>
+		<li>Toggle-JS</li>
+		<li>HTTPS Everywhere</li>
+		<li>Cookiemanager</li>
+	      </ul>
+	      </div>
+	    </ul>
+	  </div>
+	</section>
+	<section id="17">
+	  <div class="sectit" style="margin-top:-420px;">
+	    <h3 style="background:#001133">Browser Basics</h3>
+	  </div>
+	  <h4>D E M O</h4>
+	  <ul>
+	    <li>uBlock origin</li>
+	    <li>JS-Toggle</li>
+	    <li><a href="https://www.tagesanzeiger.ch/schweiz/standard/der-bund-erfasst-die-pestizidbelastung-nur-mangelhaft/story/13084956"
+	    target="_blank">tagi.ch</a>
+	    und <a href="http://www.spiegel.de/panorama/gesellschaft/pablo-escobar-monaco-villa-von-drogenbaron-in-kolumbien-gesprengt-a-1254765.html"
+	    target="_blank">SPON</a>
+	</section>
+	<section id="18" data-background-image="./images/devtools.png">
+	  <div class="sectit" style="margin-top:-40px;">
+	    <h3 style="background:#001133">Webseiten</h3>
+	  </div>
+	  <div><img style="margin-top:-10px;border: 5px solid green;"class="raw fragment" src="./images/lehrermod.png" /></div>
+	  <div class="fragment" style="color:yellow;background:#303030;opacity:0.75;margin-top:-0px;border-radius:100px;padding:20px;">
+	    <ul>
+	      <li>Wir können das Web ändern!</li>
+	      <li >Nicht ganz wirklich, aber ...</li>
+	    </ul>
+	  </div>
+	</section>
+	<section id="19">
+	  <div class="sectit" style="margin-top:-40px;">
+	    <h3 style="background:#001133">Web-Suche</h3>
+	  </div>
+	  <div style="text-align:left;">
+	  <h4>Suchmaschinen</h4>
+	  <p>Es gibt gute Gründe, Google zu vermeiden.
+	    Benutze</p>
+	  <ul>
+	    <li><a href="https://startpage.com" target="_blank">startpage.com</a></li>
+	    <li><a href="https://duckduckgo.com" target="_blank">duckduckgo.com</a></li>
+	  </ul>
+	  <p></p>&nbsp;<o></o>
+	  <div class="fragment">
+	    <h4>Such-Operatoren</h4>
+	    Startpage-Metasuche: <a href="https://support.startpage.com/index.php?/Knowledgebase/Article/View/989/34/which-search-operators-are-supported-by-startpage" target="_blank"><pre><code>url:"supported-by-startpage" site:startpage.com</code></pre></a>
+Musik-Suche: <a href="https://www.google.com/search?q=title:'index+of'+mp3+eminem" target="_blank">
+	      <pre><code>https://www.google.com/search?q=title:"index of"+mp3+eminem</code></pre></a>
+	    <div style="text-align:center;color:#FF9955;margin-top:0px;">Kann laut werden!</div>
+	  </div>
+	  </div>
+	</section>
+	<section id="20" >
+	  <div class="sectit" style="margin-top:-40px;">
+	    <h3 style="background:#001133;width:500px;margin-left:820px;">Zurück
+	    zum Fall</h3>
+	  </div>
+	  <div style="margin-top:0px;">
+	    <pre><code> Code: ROT13
+
+-------------------------------------------------------------------------------
+Qh unfg nyfb nhpu qvr mjrvgr Anpuevpug trshaqra haq ragfpuyüffryg. Thg
+trznpug!
+
+Qra aäpufgra jvpugvtra Nhsgent reuäyfg qh nhs qvrfre Jrofrvgr:
+
+fpvraprqngn.pu/tnfc_abgsnyycebgbxbyy.ugzy
+-------------------------------------------------------------------------------
+
+
+----------> end of transmision -- G.A.S.P./4711-12 <----------------------------
+	    </code></pre>
+	  </div>
+	  <ul style="columns: 2;-webkit-columns: 2;-moz-columns: 2;list-style-position: inside;">
+	    <li>Suche im Netz: Was ist das?</li>
+	    <li><a href="https://www.rot13.com/" target="_blank">Wie
+	    kann ich das entschlüsseln?</a></li>
+	  </ul>
+	  <div style="margin-top:0px;" class="fragment">
+	    <pre><code data-noescape>
+Du hast also auch die zweite Nachricht gefunden und entschlüsselt. Gut gemacht!
+
+Den nächsten wichtigen Auftrag erhälst du auf dieser Webseite:
+
+<a href="https://sciencedata.ch/gasp_notfallprotokoll.html"
+target="_blank">https://sciencedata.ch/gasp_notfallprotokoll.html</a>
+	    </code></pre>
+	  </div>
+	</section>
+	<section id="21" >
+	  <div class="sectit" style="margin-top:-240px;">
+	    <h3 style="background:#001133">Exkurs</h3>
+	  </div>
+	  <h4>WHOIS</h4>
+	  <div >
+	    <pre><code data-noescape>
+harald@w1:~/private/digiges2019$ <mark>whois sciencedata.ch</mark>
+This information is subject to an Acceptable Use Policy.
+See https://www.nic.ch/terms/aup/
+
+
+Domain name:
+sciencedata.ch
+
+Holder of domain name:
+Harald Von Waldow
+[redacted]
+[redacted]
+Switzerland
+
+Technical contact:
+Harald Von Waldow
+[redacted]
+[redacted]
+Switzerland
+
+Registrar:
+NOVATREND Services GmbH
+
+First registration date:
+2017-11-17
+
+DNSSEC:N
+
+Name servers:
+ns116.tophost.ch        [194.150.248.56]
+ns117.tophost.ch        [194.150.248.56]
+	    </code></pre>
+	  </div>
+	</section>
+	<section id="22" >
+	  <div class="sectit" style="margin-top:-120px;">
+	    <h3 style="background:#001133">CTF</h3>
+	  </div>
+	  <h4>junior Capture The Flag</h4>
+	  <ul>
+	    <li>Eigentlich ein Trainingsformat für Computersicherheitsfachleute</li>
+	    <li>Abgewandelt, um Kinder spannend und "realistisch" mit
+	    UNIX und bash vertraut zu machen.</li>
+	    <li>Merci beaucoup à Axelle Apvrille
+	      (<img style="margin-bottom:-10px;" class="raw"
+	      width="50px" src="./images/cryptax.png"
+	      /> <a href="https://twitter.com/cryptax">@cryptax</a>) ,
+	      die das erfunden und viele Challanges geschrieben
+	      hat!</li>
+	    <li><a href="https://ctfd.io/">CTFd</a>: CTF - Framework, das Teams, Aufgaben, Punkte, etc. verwaltet.</li>
+	    <li><a href="https://framagit.org/axellec/juniorctf">juniorctf</a>:
+	      Aufgaben (und Stories) und ein
+	      Docker-Container pro Challenge.</li>
+	    <li>Aufgaben werden auf via Terminal auf einem entfernten Computer<br 7> (= Docker-Container) gelöst.</li>
+	  </ul>
+	</section>
+	<section id="23">
+	  <div class="sectit" style="margin-top:-120px;">
+	    <h3 style="background:#001133">Tor</h3>
+	  </div>
+	  <h4>Anony Surfen</h4>
+	  <iframe width="560" height="315"
+	  src="https://www.youtube.com/embed/OpSUmuG3Bp8"
+	  frameborder="0" allow="accelerometer; autoplay;
+	  encrypted-media; gyroscope; picture-in-picture"
+		  allowfullscreen></iframe> <span style="font-size:70%;">Alexander Lehmann</span>
+	  <ul>
+	    <li>Eigene IP-Adresse &amp; Geoinfo via <a href="https://browserleaks.com/ip" target="_blank">browserleaks.com/ip</a></li>
+	    <li>Vergleich mit scheinbarer Ursprungs-IP mit Tor-Browser.</li>
+	    <li>=> Die ganze Welt und die Schweiz mitten drin.</li>
+	    <li>Was passiert mit euren Suchergebnissen?</li>
+	  </ul>
+	</section>
+	<section id="24">
+	  <div class="sectit" style="margin-top:-40px;">
+	    <h3 style="background:#001133">MITM-Angriff</h3>
+	  </div>
+	  <h4>Das Schulnetz beschützt dich</h4>
+	  <img class="raw" src="./images/mitm.png" width="600" />
+	  <ul>
+	    <li>IE auf Schul-Tablet akzeptiert gefälsche SSL-Zertifikate.</li>
+	    <li>Firefox bringt eigene root-CAs mit. => Bemerkt MITM-Angriff.</li>
+            <li>Warum? Was kann ich tun, um mich selbst vor unerwünschten Inhalten zu schützen?</li>
+	  </ul>
+	</section>
+        <section id="25">
+          <div class="sectit" style="margin-top:-40px;">
+	    <h3 style="background:#001133">Finale</h3>
+	  </div>
+	  <h4>Eine Mail aus dem hauptquartier</h4>
+	  <img class="raw" src="./images/finale_mail.png" width="900">
+	  <a href="https://sciencedata.ch/geoblocked" target="_blank">sciencedata.ch/geoblocked</a>
+	</section>
+	<section id="26">
+          <div class="sectit" style="margin-top:-240px;">
+	    <h3 style="background:#001133">Finale</h3>
+	  </div>
+	  <h4>Einige Take-aways</h4>
+	  <ul>
+	    <li>Scratch wird möglicherweise überschätzt - nächstes Mal versuchen wir Turte als Programmiersprache.</li>
+	    <li class="fragment">Es gib Primarschülerinnen, die können und wollen die Kommandozeile benutzen!</li>
+	    <li class="fragment">Online(Web)-Spiele sind die Pest. Nächstes mal vielleicht einen Pi-Hole vorschalten?</li>
+	    <li class="fragment">juniorCTF ist eine absolute Geheimwaffe, die für nächstes Mal massiv ausgebaut wird.</li>
+	  </ul>
+	</section>
+	<section id="27" data-background="./images/alle_anon.png">
+          <div class="sectit" style="margin-top:-370px;">
+	    <h3 style="background:#001133">Danke</h3>
+	  </div>
+	  <div style="color:#00E400;background:#303030;opacity:0.85;margin-top:-0px;border-radius:100px;padding:20px;text-align:left;">
+	      <p><a href="https://www.labdoo.org/de/content/LabdooCH"
+	      target="_blank"><img style="margin-bottom:-20px;"
+	      src="./images/labdoo-header.png"></a> für die
+	      Laptops</p>
+	      <p><a href="https://gz-zh.ch/gz-seebach/"
+	      target="_blank"><img style="margin-bottom:-20px;"
+	      src="./images/gz-logo.png"></a> für die
+	      Räumlichkeiten</p>
+		<p>Den Computerdetektiven Seebach fürs mitmachen!</p
+	  </div>
+	</section>
+
+	
+      </div>
+    </div>
+    
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+	transitionSpeed: 'default', // default/fast/slow
+	// Transition style for full page slide backgrounds
+        backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+        width: 1280,
+        height: 800,
+      
+        dependencies: [
+          // { src: 'plugin/markdown/marked.js' },
+          // { src: 'plugin/markdown/markdown.js' },
+          // { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          // Zoom in and out with Alt+click
+	  { src: 'plugin/zoom-js/zoom.js', async: true }
+        ]
+      });
+      <!-- document.querySelector('video').playbackRate = 10.0; -->
+    </script>
+  </body>
+</html>
